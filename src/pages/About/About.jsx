@@ -6,9 +6,9 @@ const timeline = [
   { year: '2023', title: 'ArqGene Founded', desc: 'Established at VIT-TBI, Vellore with a mission to merge AI and synthetic biology.' },
   { year: '2023', title: 'DST Ignition Grant', desc: 'Awarded the prestigious DST Ignition Grant from the Government of India.' },
   { year: '2024', title: 'DST NIDHI PRAYAS', desc: 'Recognized by Department of Science and Technology with NIDHI PRAYAS grant.' },
-  { year: '2024', title: 'GenXFlow Alpha', desc: 'Launched the first internal alpha of our genomics pipeline platform.' },
-  { year: '2024', title: 'Patent Filed', desc: 'Filed patents on AI-driven photobioreactor control systems and CRISPR microfluidic diagnostics.' },
-  { year: '2025', title: 'Product Launch', desc: 'Public launch of GenXFlow, Uyirinai, and Marabi platforms.' },
+  { year: '2024', title: 'GenXFlow™ Alpha', desc: 'Launched the first internal alpha of our genomics pipeline platform.' },
+  { year: '2024', title: 'Patent Filed', desc: 'Filed patents on Fermion AI R100™ bioreactor control systems and Crispr Scan microfluidic diagnostics.' },
+  { year: '2025', title: 'Product Launch', desc: 'Public launch of GenXFlow™, Uyirinai, and Marabi platforms.' },
   { year: '2025', title: 'Global Expansion', desc: 'Partnerships with research institutions across 35+ countries.' },
   { year: '2026+', title: 'Next Frontier', desc: 'Expanding into clinical diagnostics, precision medicine, and industrial fermentation.' },
 ];
@@ -73,7 +73,7 @@ export default function About() {
               Founded at the VIT Technology Business Incubator in Vellore, India, our team combines deep expertise in molecular biology, AI engineering, microfluidics, and industrial bioprocessing. We've built ArqGene to be the platform we wished existed when we started our own research.
             </p>
             <p>
-              Today, ArqGene operates at the intersection of three major technological waves: <strong>artificial intelligence</strong>, <strong>synthetic biology</strong>, and <strong>precision medicine</strong>. Our three flagship products — GenXFlow, Uyirinai, and Marabi — represent our first step toward a fully integrated biological intelligence platform.
+              Today, ArqGene operates at the intersection of three major technological waves: <strong>artificial intelligence</strong>, <strong>synthetic biology</strong>, and <strong>precision medicine</strong>. Our three flagship products — GenXFlow™, Uyirinai, and Marabi — represent our first step toward a fully integrated biological intelligence platform.
             </p>
           </div>
         </div>

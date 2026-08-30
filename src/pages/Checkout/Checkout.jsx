@@ -7,7 +7,7 @@ import './Checkout.css';
 const productPricing = {
   genxflow: {
     id: 'genxflow',
-    name: 'GenXFlow',
+    name: 'GenXFlow™',
     icon: '🧬',
     tagline: 'AI-Powered Analytics Pipeline for Genomics & Proteomics',
     color: '#00C2FF',
@@ -288,7 +288,7 @@ export default function Checkout() {
                       <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>⚡</div>
                       <p className="notice-title" style={{ color: 'var(--neon-teal)', fontWeight: 700, marginBottom: '0.5rem' }}>No Payment Required</p>
                       <p className="notice-body" style={{ color: 'var(--muted-text)', fontSize: '0.9rem', lineHeight: 1.6, maxWidth: '500px', margin: '0 auto' }}>
-                        Your 7-day free trial is completely free and requires no card or payment processing. You can download, install, and run the GenXFlow application natively on your workstation right away.
+                        Your 7-day free trial is completely free and requires no card or payment processing. You can download, install, and run the GenXFlow™ application natively on your workstation right away.
                       </p>
                     </div>
                     <div style={{ marginTop: '1.5rem' }}>

@@ -237,8 +237,8 @@ const platformHighlights = [
 const areas = [
   {
     icon: '🤖',
-    title: 'AI-Driven Photobioreactors',
-    desc: 'Intelligent systems for optimized algal cultivation and biomanufacturing automation.',
+    title: 'Fermion AI R100™ (AI Bioreactor)',
+    desc: 'Fermion AI R100™ intelligent systems for biomanufacturing automation and real-time process optimization.',
     color: '#00C2FF',
   },
   {
@@ -255,8 +255,8 @@ const areas = [
   },
   {
     icon: '🔬',
-    title: 'CRISPR-based Microfluidics',
-    desc: 'Rapid, accurate molecular diagnostics for point-of-care applications.',
+    title: 'Crispr Scan (CRISPR Microfluidics)',
+    desc: 'Crispr Scan rapid, accurate molecular diagnostics and microfluidic gene editing platforms.',
     color: '#9D4EDD',
   },
 ];
@@ -265,7 +265,7 @@ const areas = [
 const products = [
   {
     id: 'genxflow',
-    name: 'GenXFlow',
+    name: 'GenXFlow™',
     tagline: 'Sequence Pipeline Platform',
     desc: 'End-to-end NGS & metagenomics pipeline automation. Supports Flye, SPAdes, MEGAHIT, Unicycler, Fastp, Porechop, Filtlong, Quast, Prokka, FastQC, and QIIME 2 in a native desktop or private cloud platform.',
     icon: '🧬',
@@ -325,7 +325,7 @@ export default function Home() {
 
             <p className="hero-desc hero-animate" style={{ animationDelay: '0.2s' }}>
               ArqGene pioneers AI-driven biomanufacturing, synthetic biology, and precision diagnostics.
-              From photobioreactors to CRISPR platforms — we build the tools biology needs.
+              From Fermion AI R100™ bioreactors to Crispr Scan microfluidics — we build the tools biology needs.
             </p>
 
             <div className="hero-actions hero-animate" style={{ animationDelay: '0.3s' }}>
@@ -363,7 +363,7 @@ export default function Home() {
         <div className="container">
           <p className="mission-text reveal">
             At ArqGene, we design <strong>intelligent biological systems</strong> that empower a sustainable, programmable future.
-            Our innovations in <strong>AI photobioreactor systems</strong>, <strong>microfluidics for gene editing</strong>, and{' '}
+            Our innovations in <strong>Fermion AI R100™ AI bioreactors</strong>, <strong>Crispr Scan microfluidics for gene editing</strong>, and{' '}
             <strong>CRISPR-enabled platforms</strong> accelerate next-generation biomanufacturing breakthroughs.
           </p>
           <div className="gradient-line reveal" />
@@ -476,9 +476,10 @@ export default function Home() {
           <div className="tech-teaser-grid">
             <div className="tech-teaser-text reveal-left">
               <span className="section-badge">Technology</span>
-              <h2 className="section-title">AI-Driven <span className="gradient-text">Photobioreactors</span></h2>
+              <h2 className="section-title">Fermion AI R100™ <span className="gradient-text">Bioreactor</span></h2>
+              <p style={{ fontWeight: 600, color: 'var(--neon-blue)', marginBottom: '0.5rem' }}>AI-Driven Bioreactor Controller System</p>
               <p>
-                Our AI photobioreactor systems revolutionize algal cultivation through intelligent automation and real-time optimization. Machine learning algorithms dynamically adjust LED spectra and intensity to maximize photosynthetic efficiency.
+                Our Fermion AI R100™ bioreactor systems revolutionize biomanufacturing and cultivation through intelligent automation and real-time optimization. Machine learning algorithms dynamically adjust environmental spectra and parameters to maximize yield and efficiency.
               </p>
               <ul className="tech-teaser-points">
                 <li>
@@ -499,7 +500,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="tech-teaser-img reveal-right">
-              <img src="/images/bioreactor.jpg" alt="Fermion AI R100 Bioreactor Controller System" loading="lazy" />
+              <img src="/images/bioreactor.jpg" alt="Fermion AI R100™ Bioreactor Controller System" loading="lazy" />
               <div className="img-glow-frame" />
             </div>
           </div>

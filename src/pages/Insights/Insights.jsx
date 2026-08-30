@@ -4,11 +4,11 @@ import '../shared.css';
 
 const insights = [
   { title: 'AI in Biomanufacturing: The Next Decade', date: 'Jun 2026', category: 'Technology', readTime: '8 min read', icon: '🤖' },
-  { title: 'CRISPR Diagnostics: From Lab to Clinic', date: 'May 2026', category: 'Research', readTime: '12 min read', icon: '🧬' },
+  { title: 'Crispr Scan Diagnostics: From Lab to Clinic', date: 'May 2026', category: 'Research', readTime: '12 min read', icon: '🧬' },
   { title: 'Synthetic Biology for Sustainable Fuels', date: 'Apr 2026', category: 'Sustainability', readTime: '6 min read', icon: '🌱' },
   { title: 'Building Reproducible Genomics Pipelines', date: 'Mar 2026', category: 'Engineering', readTime: '10 min read', icon: '⚙️' },
   { title: 'The Promise of Cell-Free Systems', date: 'Feb 2026', category: 'Research', readTime: '7 min read', icon: '🧫' },
-  { title: 'Photobioreactors: Algae as a Platform', date: 'Jan 2026', category: 'Technology', readTime: '9 min read', icon: '🌊' },
+  { title: 'Fermion AI R100™ Bioreactors: Microorganisms as a Platform', date: 'Jan 2026', category: 'Technology', readTime: '9 min read', icon: '🌊' },
 ];
 
 export default function Insights() {

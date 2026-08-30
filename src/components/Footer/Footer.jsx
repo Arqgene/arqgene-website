@@ -3,7 +3,7 @@ import './Footer.css';
 
 const footerLinks = {
   Products: [
-    { label: 'GenXFlow', to: '/products?tab=genxflow' },
+    { label: 'GenXFlow™', to: '/products?tab=genxflow' },
     { label: 'Marabi', to: '/products?tab=marabi' },
     { label: 'Uyirinai', to: '/products?tab=uyirinai' },
     { label: 'Platform Technologies', to: '/products?view=platform' },

@@ -7,7 +7,7 @@ import './Products.css';
 const productData = {
   genxflow: {
     id: 'genxflow',
-    name: 'GenXFlow',
+    name: 'GenXFlow™',
     tagline: 'Native Desktop & Private Cloud Analytics Pipeline for Genomics & Proteomics',
     icon: '🧬',
     color: '#00C2FF',
@@ -16,7 +16,7 @@ const productData = {
     status: 'Generally Available',
 
     /* Verbatim from original index.html line 412 */
-    desc: 'GenXFlow is our premier AI-powered analytics desktop application and pipeline designed for high-throughput genomic and proteomic sequencing. Runs natively as a desktop application on your local workstation for 100% data privacy and offline processing, or can be deployed into your organization\'s managed private cloud.',
+    desc: 'GenXFlow™ is our premier AI-powered analytics desktop application and pipeline designed for high-throughput genomic and proteomic sequencing. Runs natively as a desktop application on your local workstation for 100% data privacy and offline processing, or can be deployed into your organization\'s managed private cloud.',
 
     whatHowWho: {
       what: 'Automates and accelerates genomic and proteomic sequencing workflows using a pre-configured toolkit of 11 industry-standard and proprietary tools, fully customizable for your lab.',
@@ -192,13 +192,13 @@ const productData = {
 /* ─── Two core platform technology pillars ─── */
 const platformTech = [
   {
-    id: 'photobioreactor',
-    name: 'AI-Driven Photobioreactors',
+    id: 'bioreactor',
+    name: 'Fermion AI R100™ (AI-Driven Bioreactor)',
     icon: '🌊',
     color: '#00C2FF',
     image: '/images/bioreactor.jpg',
     badge: 'Platform Technology',
-    desc: 'Our AI-driven photobioreactor systems revolutionize algal cultivation through intelligent automation and real-time optimization.',
+    desc: 'Fermion AI R100™ is our AI-driven bioreactor system that revolutionizes biomanufacturing and micro-organism cultivation through intelligent automation and real-time optimization.',
     what: 'Automates the cultivation of algae and other microorganisms using AI to optimize growth conditions.',
     how: 'Uses machine learning to dynamically adjust light spectra, intensity, nutrients, and environmental factors in real-time.',
     who: 'Biotech companies, research institutions, and sustainable energy firms looking for high-yield biomanufacturing.',
@@ -216,13 +216,13 @@ const platformTech = [
     ],
   },
   {
-    id: 'microfluidics',
-    name: 'CRISPR-Based Microfluidic Platforms',
+    id: 'crispr-scan',
+    name: 'Crispr Scan (CRISPR Microfluidics)',
     icon: '🔮',
     color: '#7CFF36',
     image: '/images/crspr.webp',
     badge: 'Platform Technology',
-    desc: 'Combining CRISPR technology with microfluidics creates powerful tools for CRISPR diagnostics at point-of-care and precise microfluidics for gene editing.',
+    desc: 'Crispr Scan combines CRISPR technology with microfluidics to create powerful tools for point-of-care diagnostics and precise gene editing.',
     what: 'Enables rapid, high-precision genetic testing and editing on a portable microfluidic chip.',
     how: 'Integrates CRISPR-Cas enzymes with microfluidic channels to detect or edit genetic material with high specificity.',
     who: 'Diagnostics firms, hospitals, and genetic research labs requiring fast and accurate molecular tools.',

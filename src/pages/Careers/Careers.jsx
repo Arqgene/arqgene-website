@@ -6,7 +6,7 @@ const openings = [
   { title: 'Bioinformatics Engineer', dept: 'Engineering', type: 'Full-time', location: 'Vellore, India', desc: 'Build and optimize genomic analysis pipelines using Rust, Python, and cloud technologies.' },
   { title: 'ML Research Scientist', dept: 'AI/ML', type: 'Full-time', location: 'Vellore, India / Remote', desc: 'Develop deep learning models for genomics, proteomics, and metabolic flux prediction.' },
   { title: 'Synthetic Biology Researcher', dept: 'Research', type: 'Full-time', location: 'Vellore, India', desc: 'Design and characterize genetic circuits, metabolic pathways, and cell-free systems.' },
-  { title: 'Microfluidics Engineer', dept: 'Hardware', type: 'Full-time', location: 'Vellore, India', desc: 'Design and prototype CRISPR-based microfluidic chips for point-of-care diagnostics.' },
+  { title: 'Microfluidics Engineer', dept: 'Hardware', type: 'Full-time', location: 'Vellore, India', desc: 'Design and prototype Crispr Scan microfluidic chips for point-of-care diagnostics.' },
   { title: 'Full-Stack Developer', dept: 'Engineering', type: 'Full-time', location: 'Remote', desc: 'Build enterprise web applications using React, Node.js, and cloud infrastructure.' },
   { title: 'Genomics Research Intern', dept: 'Research', type: 'Internship', location: 'Vellore, India', desc: '3-month hands-on experience in next-generation sequencing and bioinformatics.' },
   { title: 'AI/ML Intern', dept: 'AI/ML', type: 'Internship', location: 'Vellore, India / Remote', desc: '3-6 month program applying machine learning to biological data.' },
@@ -70,9 +70,9 @@ export default function Careers() {
           </div>
           <div className="internship-grid">
             {[
-              { title: 'Short-Term (2–3 months)', icon: '⚡', desc: 'Focused research projects in synthetic biology, CRISPR diagnostics, or photobioreactor optimization. Ideal for undergraduates.' },
+              { title: 'Short-Term (2–3 months)', icon: '⚡', desc: 'Focused research projects in synthetic biology, Crispr Scan microfluidic diagnostics, or Fermion AI R100™ bioreactor optimization. Ideal for undergraduates.' },
               { title: 'Long-Term (6–12 months)', icon: '🔬', desc: 'Immersive programs for advanced students. Work on AI-driven bioprocessing, microfluidic platform development, and computational biology.' },
-              { title: 'Remote Internship', icon: '💻', desc: 'For software engineers and bioinformaticians. Contribute to GenXFlow pipeline development and AI model training remotely.' },
+              { title: 'Remote Internship', icon: '💻', desc: 'For software engineers and bioinformaticians. Contribute to GenXFlow™ pipeline development and AI model training remotely.' },
             ].map((p, i) => (
               <div key={i} className="internship-card glass-card reveal" style={{ transitionDelay: `${i * 0.12}s` }}>
                 <div className="internship-icon">{p.icon}</div>

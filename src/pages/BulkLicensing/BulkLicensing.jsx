@@ -87,7 +87,7 @@ export default function BulkLicensing() {
               Bulk &amp; University <span className="gradient-text">License Orders</span>
             </h1>
             <p className="section-subtitle">
-              Deploy GenXFlow, Uyirinai, and Marabi across your university, hospital system, or bio-foundry with multi-seat volume discounts up to 50%.
+              Deploy GenXFlow™, Uyirinai, and Marabi across your university, hospital system, or bio-foundry with multi-seat volume discounts up to 50%.
             </p>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function BulkLicensing() {
                 <p className="box-desc">Select one or multiple products. Bundling 2+ platforms unlocks an additional 10% discount.</p>
                 <div className="bundle-products-grid">
                   {[
-                    { id: 'genxflow', name: 'GenXFlow', desc: 'AI Genomics & Proteomics Pipeline', icon: '🧬', color: '#00C2FF' },
+                    { id: 'genxflow', name: 'GenXFlow™', desc: 'AI Genomics & Proteomics Pipeline', icon: '🧬', color: '#00C2FF' },
                     { id: 'uyirinai', name: 'Uyirinai', desc: 'Molecular Docking & Simulation Platform', icon: '🔬', color: '#00E6C7' },
                     { id: 'marabi', name: 'Marabi', desc: 'Molecular Cloning & Plasmid Design Software', icon: '🧫', color: '#FF007A' },
                   ].map(p => (

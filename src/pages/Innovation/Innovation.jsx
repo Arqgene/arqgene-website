@@ -7,16 +7,16 @@ export default function Innovation() {
       <PageHero
         badge="Patents & Innovation"
         title={<>Innovation & <span className="gradient-text">IP Portfolio</span></>}
-        subtitle="ArqGene's patent portfolio protects our proprietary AI algorithms, photobioreactor designs, and CRISPR microfluidic architectures."
+        subtitle="ArqGene's patent portfolio protects our proprietary AI algorithms, Fermion AI R100™ bioreactor designs, and Crispr Scan microfluidic architectures."
         color="#7CFF36"
       />
       <section className="section">
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem', maxWidth: '800px', margin: '0 auto' }}>
             {[
-              { title: 'AI Photobioreactor Control System', status: 'Patent Pending', year: '2024', inventors: 'Dr. L. Karthik, Dr. Vijai Chandra', color: '#00C2FF' },
-              { title: 'CRISPR Microfluidic Diagnostic Chip', status: 'Patent Pending', year: '2024', inventors: 'Dr. Vijai Chandra', color: '#00E6C7' },
-              { title: 'Genomic Pipeline AI Architecture', status: 'Patent Pending', year: '2025', inventors: 'Dr. L. Karthik', color: '#7CFF36' },
+              { title: 'Fermion AI R100™ Bioreactor Control System', status: 'Patent Pending', year: '2024', inventors: 'Dr. L. Karthik, Dr. Vijai Chandra', color: '#00C2FF' },
+              { title: 'Crispr Scan Microfluidic Diagnostic Chip', status: 'Patent Pending', year: '2024', inventors: 'Dr. Vijai Chandra', color: '#00E6C7' },
+              { title: 'GenXFlow™ Genomic Pipeline AI Architecture', status: 'Patent Pending', year: '2025', inventors: 'Dr. L. Karthik', color: '#7CFF36' },
               { title: 'Automated Fermentation ML Control', status: 'Filed', year: '2025', inventors: 'Dr. L. Karthik, Dr. Vijai Chandra', color: '#9D4EDD' },
             ].map((p, i) => (
               <div key={i} className="glass-card" style={{ padding: '2rem', borderTop: `2px solid ${p.color}` }}>

@@ -10,8 +10,8 @@ const downloads = [
   /* ---- GenXFlow ---- */
   {
     id: 'gxf-win-64',
-    product: 'GenXFlow',
-    name: 'GenXFlow Desktop (Windows 64-bit)',
+    product: 'GenXFlow™',
+    name: 'GenXFlow™ Desktop (Windows 64-bit)',
     version: 'v2.4.1',
     platform: 'Windows 64-bit',
     platformIcon: '🪟',
@@ -26,8 +26,8 @@ const downloads = [
   },
   {
     id: 'gxf-win-32',
-    product: 'GenXFlow',
-    name: 'GenXFlow Desktop (Windows 32-bit)',
+    product: 'GenXFlow™',
+    name: 'GenXFlow™ Desktop (Windows 32-bit)',
     version: 'v2.4.1',
     platform: 'Windows 32-bit',
     platformIcon: '🪟',
@@ -42,8 +42,8 @@ const downloads = [
   },
   {
     id: 'gxf-mac',
-    product: 'GenXFlow',
-    name: 'GenXFlow Desktop (macOS)',
+    product: 'GenXFlow™',
+    name: 'GenXFlow™ Desktop (macOS)',
     version: 'v2.4.1',
     platform: 'macOS',
     platformIcon: '🍎',
@@ -58,8 +58,8 @@ const downloads = [
   },
   {
     id: 'gxf-linux',
-    product: 'GenXFlow',
-    name: 'GenXFlow Desktop (Linux)',
+    product: 'GenXFlow™',
+    name: 'GenXFlow™ Desktop (Linux)',
     version: 'v2.4.1',
     platform: 'Linux',
     platformIcon: '🐧',
@@ -285,11 +285,11 @@ export default function Download() {
   const [downloadTriggered, setDownloadTriggered] = useState(null);
   const revealRef = useReveal();
 
-  const products = ['All', 'GenXFlow', 'Uyirinai', 'Marabi'];
+  const products = ['All', 'GenXFlow™', 'Uyirinai', 'Marabi'];
 
   const filtered = downloads.filter(d => {
     const matchCat = activeCategory === 'All' || d.category === activeCategory || d.platform.includes(activeCategory);
-    const matchProd = activeProduct === 'All' || d.product === activeProduct;
+    const matchProd = activeProduct === 'All' || d.product === activeProduct || (activeProduct === 'GenXFlow™' && d.product.includes('GenXFlow'));
     const matchSearch = !search || d.name.toLowerCase().includes(search.toLowerCase()) || d.desc.toLowerCase().includes(search.toLowerCase());
     return matchCat && matchProd && matchSearch;
   });
@@ -338,7 +338,7 @@ export default function Download() {
               Desktop Software <span className="gradient-text">Installers</span>
             </h1>
             <p className="section-subtitle reveal">
-              Download native offline desktop app installers for GenXFlow, Uyirinai, and Marabi tools on Windows (32-bit &amp; 64-bit), macOS, and Linux.
+              Download native offline desktop app installers for GenXFlow™, Uyirinai, and Marabi tools on Windows (32-bit &amp; 64-bit), macOS, and Linux.
             </p>
           </div>
 

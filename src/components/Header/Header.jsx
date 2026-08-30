@@ -7,10 +7,10 @@ const navItems = [
     label: 'Products',
     to: '/products',
     children: [
-      { label: 'GenXFlow', sub: 'Sequence Pipeline Platform (NGS & Metagenomics)', to: '/products?tab=genxflow', icon: '🧬' },
+      { label: 'GenXFlow™', sub: 'Sequence Pipeline Platform (NGS & Metagenomics)', to: '/products?tab=genxflow', icon: '🧬' },
       { label: 'Marabi', sub: 'Molecular Cloning & Plasmid Design Software', to: '/products?tab=marabi', icon: '🧫' },
       { label: 'Uyirinai', sub: 'Molecular Docking & MD Simulation Platform', to: '/products?tab=uyirinai', icon: '🔬' },
-      { label: 'Platform Technologies', sub: 'Photobioreactors & Microfluidics', to: '/products?view=platform', icon: '⚡' },
+      { label: 'Platform Technologies', sub: 'Fermion AI R100™ & Crispr Scan', to: '/products?view=platform', icon: '⚡' },
     ],
   },
   {
