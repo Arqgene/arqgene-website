@@ -1,0 +1,166 @@
+.team-hero {
+  background: var(--bg-primary);
+  padding-top: calc(var(--sp-xl) + 80px);
+  position: relative;
+  overflow: hidden;
+}
+.team-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 20%, rgba(157,78,221,0.07) 0%, transparent 70%);
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.founder-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+  align-items: flex-start;
+}
+
+.founder-img-wrap {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  border: 2px solid var(--border-subtle);
+}
+
+.founder-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3));
+}
+
+.founder-info {
+  flex: 1;
+}
+
+.founder-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+  font-family: var(--font-display);
+}
+
+.founder-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--neon-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.founder-bio {
+  font-size: 0.875rem;
+  color: var(--muted-text);
+  line-height: 1.7;
+  margin-bottom: 0.875rem;
+}
+
+.founder-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+/* Advisors */
+.advisors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.advisor-card {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.advisor-img-wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.advisor-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.advisor-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.advisor-title-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--neon-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.advisor-bio {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.advisor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .founders-grid {
+    grid-template-columns: 1fr;
+  }
+  .advisors-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .founder-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .founder-tags {
+    justify-content: center;
+  }
+  .advisors-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,11 @@
+.tech-split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.tech-split-grid.reverse { }
+.tech-img-card { padding: 1.5rem; overflow: hidden; }
+.tech-img-card img { width: 100%; border-radius: var(--r-lg); max-height: 340px; object-fit: cover; }
+.tech-stats-mini { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; }
+.tsm-item { padding: 1rem; background: rgba(0,194,255,0.04); border: 1px solid rgba(0,194,255,0.1); border-radius: var(--r-md); }
+.tsm-val { font-size: 1.3rem; font-weight: 800; color: var(--neon-blue); font-family: var(--font-display); }
+.tsm-label { font-size: 0.8rem; color: var(--muted-text); margin-top: 0.25rem; }
+.crispr-features { display: flex; flex-direction: column; gap: 0.625rem; margin-top: 1.5rem; }
+.crispr-feature { font-size: 0.9rem; color: var(--muted-text); display: flex; gap: 0.625rem; align-items: center; }
+@media (max-width: 900px) { .tech-split-grid { grid-template-columns: 1fr; gap: 2.5rem; } }

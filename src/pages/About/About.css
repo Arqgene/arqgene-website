@@ -1,0 +1,267 @@
+.about-hero {
+  background: var(--bg-primary);
+  padding-top: calc(var(--sp-xl) + 80px);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(0,194,255,0.07) 0%, transparent 70%);
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mv-card {
+  padding: 3rem 2.5rem;
+}
+
+.mv-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.mv-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+}
+
+.mv-card p {
+  color: var(--muted-text);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.mv-card p strong {
+  color: var(--neon-blue);
+  font-weight: 600;
+}
+
+/* Story */
+.story-section {
+  background: var(--surface-1);
+}
+
+.story-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.story-text p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.9;
+  margin: 0;
+}
+
+.story-text strong {
+  color: var(--neon-blue);
+  font-weight: 600;
+}
+
+/* Timeline */
+.timeline-section {
+  background: var(--bg-primary);
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--neon-blue), var(--neon-teal), var(--neon-green), transparent);
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item.left {
+  justify-content: flex-end;
+  padding-right: calc(50% + 2rem);
+}
+
+.timeline-item.right {
+  padding-left: calc(50% + 2rem);
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 1.5rem;
+  width: 24px;
+  height: 24px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 12px rgba(0,194,255,0.5);
+}
+
+.timeline-item.left .timeline-connector {
+  right: calc(50% - 12px);
+}
+
+.timeline-item.right .timeline-connector {
+  left: calc(50% - 12px);
+}
+
+.timeline-card {
+  padding: 1.5rem 2rem;
+  max-width: 340px;
+  width: 100%;
+}
+
+.timeline-year {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--neon-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0.375rem 0 0.5rem;
+  font-family: var(--font-display);
+}
+
+.timeline-desc {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Values */
+.values-section {
+  background: var(--surface-1);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  padding: 2rem;
+  text-align: center;
+  transition: all var(--t-normal);
+}
+
+.value-icon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.value-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.625rem;
+  font-family: var(--font-display);
+}
+
+.value-desc {
+  font-size: 0.875rem;
+  color: var(--muted-text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Location */
+.location-section {
+  background: var(--bg-primary);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.location-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+.location-map {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-placeholder {
+  text-align: center;
+  color: var(--muted-text);
+}
+
+.map-placeholder span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.map-placeholder p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mv-grid,
+  .location-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    padding: 0 0 0 3rem;
+    justify-content: flex-start;
+  }
+  .timeline-connector {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .timeline-line {
+    left: 12px;
+  }
+  .timeline-card {
+    max-width: 100%;
+  }
+}
