@@ -2,8 +2,12 @@
 export const getApiBaseUrl = () => {
   const envUrl = import.meta.env.VITE_API_BASE_URL;
   if (envUrl && envUrl.trim() !== '') {
-    // Strip trailing slash if present
-    return envUrl.replace(/\/+$/, '');
+    let cleaned = envUrl.trim().replace(/\/+$/, '');
+    if (!/^https?:\/\//i.test(cleaned)) {
+      cleaned = `https://${cleaned}`;
+    }
+    return cleaned;
   }
-  return 'http://34.58.134.141';
+  return 'https://api.arqgene.com';
 };
+
