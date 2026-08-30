@@ -12,11 +12,11 @@ const downloads = [
     id: 'gxf-win-64',
     product: 'GenXFlow™',
     name: 'GenXFlow™ Desktop (Windows 64-bit)',
-    version: 'v2.4.1',
+    version: 'v2.0',
     platform: 'Windows 64-bit',
     platformIcon: '🪟',
     category: 'Windows (64-bit)',
-    size: '187 MB',
+    size: '65 MB',
     date: '2026-06-15',
     desc: 'Native desktop genomics pipeline app for 64-bit Windows 10, 11 & Windows Server (x64). Full multithreading & GPU acceleration.',
     tags: ['Genomics', '64-bit (x64)', 'Windows', 'Offline'],
@@ -28,11 +28,11 @@ const downloads = [
     id: 'gxf-win-32',
     product: 'GenXFlow™',
     name: 'GenXFlow™ Desktop (Windows 32-bit)',
-    version: 'v2.4.1',
+    version: 'v2.0',
     platform: 'Windows 32-bit',
     platformIcon: '🪟',
     category: 'Windows (32-bit)',
-    size: '175 MB',
+    size: '47 MB',
     date: '2026-06-15',
     desc: 'Native desktop genomics pipeline app for 32-bit legacy Windows environments (x86). Optimized memory footprint.',
     tags: ['Genomics', '32-bit (x86)', 'Windows', 'Offline'],
@@ -256,9 +256,9 @@ function DownloadItem({ item, onStartDownload }) {
       </div>
 
       {item.internalOnly ? (
-        <Link 
+        <Link
           to={`/contact?product=${encodeURIComponent(item.product)}&platform=${encodeURIComponent(item.platform)}&reason=internal-only`}
-          className="dl-btn" 
+          className="dl-btn"
           style={{ borderColor: 'rgba(255, 255, 255, 0.15)', color: 'var(--muted-text)', textDecoration: 'none' }}
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -301,12 +301,12 @@ export default function Download() {
     const isLinux = item.platform === 'Linux';
 
     let downloadUrl = 'https://downloads.arqgene.com/';
-    if (item.product === 'GenXFlow') {
+    if (item.product.includes('GenXFlow')) {
       if (is32) downloadUrl = import.meta.env.VITE_GENXFLOW_WIN_X86_URL || 'https://next99.nyc3.digitaloceanspaces.com/arqgene/x32/GenXFlow_Setup.exe';
       else if (isMac) downloadUrl = 'https://downloads.arqgene.com/genxflow/v2.4.1/GenXFlow-v2.4.1-mac.dmg';
       else if (isLinux) downloadUrl = 'https://downloads.arqgene.com/genxflow/v2.4.1/GenXFlow-v2.4.1-linux.AppImage';
       else downloadUrl = import.meta.env.VITE_GENXFLOW_WIN_X64_URL || 'https://next99.nyc3.digitaloceanspaces.com/arqgene/x64/GenXFlow_Setup.exe';
-    } else if (item.product === 'Uyirinai') {
+    } else if (item.product.includes('Uyirinai')) {
       if (is32) downloadUrl = 'https://downloads.arqgene.com/uyirinai/v1.2.3/Uyirinai-v1.2.3-win-x86.exe';
       else if (isMac) downloadUrl = 'https://downloads.arqgene.com/uyirinai/v1.2.3/Uyirinai-v1.2.3-mac.dmg';
       else if (isLinux) downloadUrl = 'https://downloads.arqgene.com/uyirinai/v1.2.3/Uyirinai-v1.2.3-linux.deb';
@@ -432,18 +432,13 @@ export default function Download() {
             <div className="modal-icon">⚡</div>
             <h2 className="modal-title">Starting Installer Download</h2>
             <p className="modal-desc">
-              Direct download initiated for <strong>{downloadTriggered.item}</strong> ({downloadTriggered.version}).
+              Download <strong>{downloadTriggered.item}</strong> ({downloadTriggered.version}).
             </p>
-            <div className="license-key-box" style={{ wordBreak: 'break-all', textAlign: 'left' }}>
-              <span style={{ fontSize: '0.72rem', color: 'var(--muted-text)', display: 'block', marginBottom: '0.25rem' }}>Download URL:</span>
-              <code style={{ fontSize: '0.8rem' }}>{downloadTriggered.downloadUrl}</code>
-            </div>
-            <p style={{ fontSize: '0.8rem', color: 'var(--muted-text)', marginTop: '0.75rem' }}>
-              Note: ArqGene desktop tools operate 100% offline on your machine for complete data privacy and local processing.
-            </p>
+
+
             <div className="modal-actions" style={{ marginTop: '1.5rem' }}>
               <a href={downloadTriggered.downloadUrl} target="_blank" rel="noreferrer" className="btn-primary">
-                Download Direct File →
+                Download
               </a>
               <button className="btn-ghost" onClick={() => setDownloadTriggered(null)}>Close</button>
             </div>
