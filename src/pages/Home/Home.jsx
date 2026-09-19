@@ -323,15 +323,6 @@ export default function Home() {
               </Link>
               <Link to="/about" className="btn-outline">Learn Our Science</Link>
             </div>
-
-            <div className="hero-trust hero-animate" style={{ animationDelay: '0.4s' }}>
-              <span className="trust-label">Backed by</span>
-              <div className="trust-badges">
-                <span className="badge badge-blue">DST (Govt. of India)</span>
-                <span className="badge badge-teal">Google for Startups</span>
-                <span className="badge badge-purple">VIT-TBI Incubator</span>
-              </div>
-            </div>
           </div>
 
           {/* Right — Live Dashboard */}
