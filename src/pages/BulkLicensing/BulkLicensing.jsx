@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './BulkLicensing.css';
 
 const baseSeatPrices = {
-  genxflow: 999, // ₹999/mo per seat base
+  genxflow: 5000, // ₹5,000/mo per seat base (or ₹50,000/yr)
   uyirinai: 1499,
   marabi: 2499,
 };

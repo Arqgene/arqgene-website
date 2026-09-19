@@ -72,7 +72,7 @@ const productData = {
       { label: 'Max genome size', value: 'Up to 10 Gbp (microbial, plant, mammalian, complex genomes)' },
       { label: 'Minimum RAM', value: '16 GB (32 GB recommended for large assembly)' },
       { label: 'Data Sovereignty', value: '100% Local offline processing or Private Cloud instance' },
-      { label: 'License', value: '7-Day Free Trial, Academic (₹999/mo), Enterprise (Custom)' },
+      { label: 'License', value: '7-Day Free Trial, Academic (₹5,000/mo or ₹50,000/yr), Professional Lab (Contact Us)' },
     ],
   },
 

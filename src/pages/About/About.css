@@ -1,14 +1,57 @@
-.about-hero {
-  background: var(--bg-primary);
-  padding-top: calc(var(--sp-xl) + 80px);
+.about-page {
+  background-color: var(--bg-primary);
+  /* Continuous, perfectly aligned brand blue technical grid across the whole page */
+  background-image: 
+    linear-gradient(rgba(0, 194, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 194, 255, 0.035) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: top center;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-.about-hero-bg {
+/* Unified Page-Level Ambient Aurora Glows */
+.about-ambient-glow {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(0,194,255,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.about-ambient-glow.glow-top {
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 550px;
+  background: radial-gradient(ellipse at center, rgba(0, 194, 255, 0.09) 0%, rgba(0, 230, 199, 0.04) 45%, transparent 70%);
+}
+
+.about-ambient-glow.glow-mid {
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px;
+  height: 700px;
+  background: radial-gradient(ellipse at center, rgba(0, 194, 255, 0.07) 0%, rgba(157, 78, 221, 0.04) 50%, transparent 70%);
+}
+
+.about-ambient-glow.glow-bottom {
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 950px;
+  height: 500px;
+  background: radial-gradient(ellipse at center, rgba(0, 194, 255, 0.06) 0%, transparent 70%);
+}
+
+.about-hero {
+  background: transparent;
+  padding-top: calc(var(--sp-xl) + 80px);
+  position: relative;
+  z-index: 1;
 }
 
 .mv-grid {
@@ -45,9 +88,17 @@
   font-weight: 600;
 }
 
+.mv-section {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
 /* Story */
 .story-section {
-  background: var(--surface-1);
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .story-text {
@@ -157,7 +208,9 @@
 
 /* Values */
 .values-section {
-  background: var(--surface-1);
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .values-grid {
@@ -194,7 +247,9 @@
 
 /* Location */
 .location-section {
-  background: var(--bg-primary);
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .location-grid {

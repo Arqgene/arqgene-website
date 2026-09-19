@@ -33,7 +33,7 @@ export default function Careers() {
             <span className="section-badge reveal">Join Us</span>
             <h1 className="section-title reveal">Build the <span className="gradient-text">Future of Biology</span></h1>
             <p className="section-subtitle reveal">
-              ArqGene is on a mission to merge artificial intelligence with synthetic biology. We're looking for scientists, engineers, and dreamers to join us.
+              Founded in 2025, ArqGene is on a mission to merge artificial intelligence with synthetic biology. We're looking for scientists, engineers, and dreamers to join us.
             </p>
           </div>
           <div style={{ textAlign: 'center' }} className="reveal">

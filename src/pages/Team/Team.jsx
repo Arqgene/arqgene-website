@@ -7,16 +7,16 @@ const founders = [
     title: 'Founder & CEO',
     bio: 'Expert in synthetic biology and AI-driven bioprocessing. Leading ArqGene\'s mission to merge intelligent systems with biological engineering.',
     image: '/images/KARTHIK NEW white.png',
-    linkedin: 'https://www.linkedin.com/in/arqgene-llp-0ab916391/',
+    linkedin: 'https://www.linkedin.com/in/karthik-l-45b88b51/',
     tags: ['Synthetic Biology', 'AI', 'Bioprocessing'],
   },
   {
     name: 'Dr. Vijai Chandra',
     title: 'Founder & CTO',
-    bio: 'Pioneer in microfluidics and CRISPR diagnostics. Architecting the technical foundation of ArqGene\'s platform products.',
+    bio: 'Focused on US health testing and accelerating the clinical adoption of epigenetic and microbiome diagnostics for data-driven healthcare interventions and national infrastructure initiatives.',
     image: '/images/VIJAY.jpeg',
-    linkedin: 'https://www.linkedin.com/in/arqgene-llp-0ab916391/',
-    tags: ['Microfluidics', 'CRISPR', 'Platform Engineering'],
+    linkedin: 'https://www.linkedin.com/in/vijaichandrasekaran/',
+    tags: ['Clinical Diagnostics', 'Epigenetics', 'Microbiome Testing', 'Health Infrastructure'],
   },
 ];
 
@@ -56,7 +56,7 @@ export default function Team() {
             <span className="section-badge reveal">Our People</span>
             <h1 className="section-title reveal">The Team Behind <span className="gradient-text">ArqGene</span></h1>
             <p className="section-subtitle reveal">
-              A multidisciplinary team of scientists, engineers, and entrepreneurs united by a common goal — programming biology to benefit humanity.
+              Founded in 2025, ArqGene brings together a multidisciplinary team of scientists, engineers, and entrepreneurs united by a common goal — programming biology to benefit humanity.
             </p>
           </div>
         </div>

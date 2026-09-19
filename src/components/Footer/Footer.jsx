@@ -45,7 +45,7 @@ export default function Footer() {
               <img src="/images/ARQGENE NAME.png" alt="ArqGene" className="footer-logo" />
             </Link>
             <p className="footer-tagline">
-              Engineering biology with intelligence. Building the future of synthetic biology and biomanufacturing.
+              Engineering biology with intelligence. Founded in 2025 at VIT-TBI, ArqGene builds the future of synthetic biology and biomanufacturing.
             </p>
             <div className="footer-social">
               <a href={import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/arqgene-llp-0ab916391/'} target="_blank" rel="noreferrer" className="social-btn" aria-label="LinkedIn">
@@ -98,11 +98,11 @@ export default function Footer() {
         {/* Bottom */}
         <div className="footer-bottom">
           <p className="footer-copy">
-            © {year} ArqGene LLP. All rights reserved. Built in India 🇮🇳
+            © 2025 ArqGene LLP. All rights reserved. Built in India 🇮🇳
           </p>
           <div className="footer-bottom-badges">
-            <span className="badge badge-blue">DST NIDHI PRAYAS</span>
-            <span className="badge badge-teal">DST Ignition Grant</span>
+            <span className="badge badge-blue">DST (Govt. of India)</span>
+            <span className="badge badge-teal">Google for Startups</span>
             <span className="badge badge-green">VIT-TBI Incubated</span>
           </div>
         </div>

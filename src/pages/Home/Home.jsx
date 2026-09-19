@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useReveal } from '../../hooks/useReveal';
+import AwardsRibbon from '../../components/AwardsRibbon/AwardsRibbon';
 import './Home.css';
 
 /* ---- Particle Canvas ---- */
@@ -224,14 +225,7 @@ function PipelineDashboard() {
   );
 }
 
-/* ---- Authentic Platform Benchmarks & Startup Milestones ---- */
-const platformHighlights = [
-  { value: '3 Flagship', label: 'Biotech Platforms (GenXFlow, Marabi, Uyirinai)', color: 'var(--neon-blue)' },
-  { value: 'NIDHI PRAYAS', label: 'DST Govt. of India Grant Winner', color: 'var(--neon-teal)' },
-  { value: 'VIT-TBI', label: 'Incubated Deep-Tech Startup', color: 'var(--neon-green)' },
-  { value: 'Plasmid Design', label: 'Indian-Made Molecular Cloning Software', color: 'var(--neon-purple)' },
-  { value: 'GPU Accelerated', label: 'Native Offline Docking & Simulation', color: 'var(--neon-blue)' },
-];
+
 
 /* ---- Area Cards ---- */
 const areas = [
@@ -312,19 +306,13 @@ export default function Home() {
         <div className="hero-inner container">
           {/* Left */}
           <div className="hero-left">
-            <div className="hero-badge hero-animate" style={{ animationDelay: '0s' }}>
-              <span className="badge badge-blue">
-                <span className="live-dot" /> India's Premier Synthetic Biology Platform
-              </span>
-            </div>
-
-            <h1 className="hero-title hero-animate" style={{ animationDelay: '0.1s' }}>
+            <h1 className="hero-title hero-animate" style={{ animationDelay: '0s' }}>
               Engineering the{' '}
               <span className="gradient-text-aurora">Future of Biology</span>
             </h1>
 
             <p className="hero-desc hero-animate" style={{ animationDelay: '0.2s' }}>
-              ArqGene pioneers AI-driven biomanufacturing, synthetic biology, and precision diagnostics.
+              Founded in 2025, ArqGene pioneers AI-driven biomanufacturing, synthetic biology, and precision diagnostics.
               From Fermion AI R100™ bioreactors to Crispr Scan microfluidics — we build the tools biology needs.
             </p>
 
@@ -339,9 +327,9 @@ export default function Home() {
             <div className="hero-trust hero-animate" style={{ animationDelay: '0.4s' }}>
               <span className="trust-label">Backed by</span>
               <div className="trust-badges">
-                <span className="badge badge-blue">DST NIDHI PRAYAS</span>
-                <span className="badge badge-teal">DST Ignition</span>
-                <span className="badge badge-purple">VIT-TBI</span>
+                <span className="badge badge-blue">DST (Govt. of India)</span>
+                <span className="badge badge-teal">Google for Startups</span>
+                <span className="badge badge-purple">VIT-TBI Incubator</span>
               </div>
             </div>
           </div>
@@ -370,20 +358,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== PLATFORM HIGHLIGHTS & MILESTONES ===== */}
-      <section className="stats-section section grid-bg">
-        <div className="container">
-          <div className="stats-grid">
-            {platformHighlights.map((s, i) => (
-              <div className="stat-card glass-card reveal" key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div className="stat-value" style={{ color: s.color, fontSize: s.value.length > 8 ? '1.4rem' : '1.8rem' }}>{s.value}</div>
-                <div className="stat-label">{s.label}</div>
-                <div className="stat-glow" style={{ background: `radial-gradient(circle, ${s.color}20, transparent)` }} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ===== AWARDS & HONOURS (Interactive Spotlight Ribbon - Location #1) ===== */}
+      <AwardsRibbon />
 
       {/* ===== AREAS ===== */}
       <section className="areas-section section">
@@ -507,28 +483,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== GRANTS ===== */}
-      <section className="grants-section section grid-bg">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-badge reveal">Recognition</span>
-            <h2 className="section-title reveal">Grants & Recognition</h2>
-          </div>
-          <div className="grants-grid">
-            {[
-              { title: 'DST NIDHI PRAYAS', body: 'Department of Science and Technology, Government of India', icon: '🏛️' },
-              { title: 'DST Ignition Grant', body: 'Department of Science and Technology, Government of India', icon: '🔥' },
-              { title: 'VIT-TBI Incubated', body: 'VIT Technology Business Incubator, Vellore', icon: '🏫' },
-            ].map((g, i) => (
-              <div className="grant-card glass-card reveal" key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div className="grant-icon">{g.icon}</div>
-                <h3 className="grant-title">{g.title}</h3>
-                <p className="grant-body">{g.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== CTA ===== */}
       <section className="cta-section section">

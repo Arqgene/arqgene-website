@@ -6,10 +6,10 @@ export default function Pricing() {
   return (
     <main className="page-enter">
       <PageHero
-        badge="Transparent Pricing &amp; Licensing"
-        title={<>Simple, <span className="gradient-text">Accessible Licensing</span></>}
-        subtitle="Choose the license that fits your research needs. From a 7-day free trial to enterprise bio-foundry deployments."
-        color="#7CFF36"
+        badge="Purchase GenXFlow"
+        title={<>Purchase <span className="gradient-text">GenXFlow</span></>}
+        subtitle="Choose the license that fits your genomic research needs. From an evaluation trial to high-throughput enterprise bio-foundry deployments."
+        color="#00C2FF"
       />
 
       <section className="section">
@@ -27,8 +27,10 @@ export default function Pricing() {
               },
               {
                 plan: 'Academic / Research',
-                price: '₹999',
-                period: '/month',
+                originalPrice: '₹60,000/year',
+                price: '₹50,000',
+                period: '/year',
+                discountBadge: 'Save ₹10,000',
                 color: '#00C2FF',
                 to: '/avail-license?tier=academic',
                 features: ['Up to 5 Lab seats', '100 GB Cloud storage', 'All 10 Genomic pipelines', 'Real-time bioprocess AI', 'Priority SLURM HPC compute', 'Email & Discord support'],
@@ -36,20 +38,55 @@ export default function Pricing() {
                 highlight: true,
               },
               {
-                plan: 'Enterprise & Bio-Foundry',
-                price: 'Custom SLA',
+                plan: 'Professional Lab',
+                price: 'Contact Us',
                 period: '',
+                subtext: 'Pricing discussed based on requirements',
                 color: '#9D4EDD',
-                to: '/bulk-licensing',
-                features: ['Unlimited seat license', 'On-premise / Private cloud', '21 CFR Part 11 compliance', 'Dedicated technical CSM', 'Custom SCADA & API SDK', '99.9% Uptime SLA'],
-                cta: 'Bulk & Institutional Order',
+                to: '/contact?product=genxflow&tier=professional-lab',
+                features: [
+                  'Unlimited Lab & bio-foundry seats',
+                  'Dedicated on-premise / private cloud',
+                  'Custom pipeline scripting & SLURM HPC',
+                  '21 CFR Part 11 compliance documentation',
+                  'REST API, Python SDK & custom connectors',
+                  '24/7 Dedicated Technical Support & SLAs',
+                ],
+                cta: 'Contact Us',
               },
             ].map((p, i) => (
               <div key={i} className="glass-card" style={{ padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '1rem', position: 'relative', overflow: 'hidden', borderColor: p.highlight ? `${p.color}40` : '', boxShadow: p.highlight ? `0 0 30px ${p.color}20` : '' }}>
                 {p.highlight && <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(90deg, #00C2FF, #00E6C7)', color: '#000', fontSize: '0.7rem', fontWeight: 700, padding: '0.2rem 1rem', borderRadius: '0 0 8px 8px' }}>Recommended for Labs</div>}
                 <div style={{ color: p.color, fontSize: '1.5rem', marginTop: p.highlight ? '1rem' : '0' }}>{'⬡'}</div>
                 <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--white)', fontFamily: 'var(--font-display)' }}>{p.plan}</div>
-                <div style={{ fontSize: '2.2rem', fontWeight: 800, color: p.color, fontFamily: 'var(--font-display)' }}>{p.price}<span style={{ fontSize: '1rem', fontWeight: 400, color: 'var(--muted-text)' }}>{p.period}</span></div>
+                
+                {/* Price Display */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', minHeight: '80px', justifyContent: 'flex-end' }}>
+                  {p.originalPrice && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                      <span style={{ textDecoration: 'line-through', color: 'rgba(255,255,255,0.45)', fontSize: '1.1rem', fontWeight: 600 }}>
+                        {p.originalPrice}
+                      </span>
+                      {p.discountBadge && (
+                        <span style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#10b981', border: '1px solid rgba(16, 185, 129, 0.3)', padding: '0.15rem 0.55rem', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 700 }}>
+                          {p.discountBadge}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  <div style={{ fontSize: '2.4rem', fontWeight: 800, color: p.color, fontFamily: 'var(--font-display)', lineHeight: 1.1 }}>
+                    {p.price}
+                    <span style={{ fontSize: '1rem', fontWeight: 400, color: 'var(--muted-text)' }}>{p.period}</span>
+                  </div>
+                  {p.subtext ? (
+                    <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', fontFamily: 'var(--font-mono, monospace)', lineHeight: 1.35 }}>
+                      <span style={{ color: p.color, fontWeight: 600 }}>{p.subtext}</span>
+                    </div>
+                  ) : (
+                    <div style={{ fontSize: '0.8rem', color: 'transparent', userSelect: 'none' }}>-</div>
+                  )}
+                </div>
+
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', flex: 1, margin: '1rem 0' }}>
                   {p.features.map(f => <li key={f} style={{ fontSize: '0.875rem', color: 'var(--light-text)', display: 'flex', gap: '0.5rem' }}><span style={{ color: p.color, fontWeight: 800 }}>✓</span> {f}</li>)}
                 </ul>

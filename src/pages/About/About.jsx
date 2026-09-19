@@ -1,17 +1,7 @@
 import { useReveal } from '../../hooks/useReveal';
 import { Link } from 'react-router-dom';
+import JourneyTimeline from '../../components/JourneyTimeline/JourneyTimeline';
 import './About.css';
-
-const timeline = [
-  { year: '2023', title: 'ArqGene Founded', desc: 'Established at VIT-TBI, Vellore with a mission to merge AI and synthetic biology.' },
-  { year: '2023', title: 'DST Ignition Grant', desc: 'Awarded the prestigious DST Ignition Grant from the Government of India.' },
-  { year: '2024', title: 'DST NIDHI PRAYAS', desc: 'Recognized by Department of Science and Technology with NIDHI PRAYAS grant.' },
-  { year: '2024', title: 'GenXFlow™ Alpha', desc: 'Launched the first internal alpha of our genomics pipeline platform.' },
-  { year: '2024', title: 'Patent Filed', desc: 'Filed patents on Fermion AI R100™ bioreactor control systems and Crispr Scan microfluidic diagnostics.' },
-  { year: '2025', title: 'Product Launch', desc: 'Public launch of GenXFlow™, Uyirinai, and Marabi platforms.' },
-  { year: '2025', title: 'Global Expansion', desc: 'Partnerships with research institutions across 35+ countries.' },
-  { year: '2026+', title: 'Next Frontier', desc: 'Expanding into clinical diagnostics, precision medicine, and industrial fermentation.' },
-];
 
 const values = [
   { icon: '🔬', title: 'Scientific Rigor', desc: 'Every decision grounded in peer-reviewed science and validated data.' },
@@ -27,22 +17,26 @@ export default function About() {
 
   return (
     <main className="about-page page-enter" ref={revealRef}>
+      {/* Unified Ambient Aurora Glows */}
+      <div className="about-ambient-glow glow-top" />
+      <div className="about-ambient-glow glow-mid" />
+      <div className="about-ambient-glow glow-bottom" />
+
       {/* Hero */}
       <section className="about-hero section">
-        <div className="about-hero-bg" />
         <div className="container">
           <div className="section-header">
             <span className="section-badge reveal">Our Story</span>
             <h1 className="section-title reveal">Engineering Biology<br />with <span className="gradient-text">Intelligence</span></h1>
             <p className="section-subtitle reveal">
-              Founded in the heart of India's innovation ecosystem, ArqGene is building the future of synthetic biology — one intelligent system at a time.
+              Founded in 2025 in the heart of India's innovation ecosystem, ArqGene is building the future of synthetic biology — one intelligent system at a time.
             </p>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="mv-section section grid-bg">
+      <section className="mv-section section">
         <div className="container">
           <div className="mv-grid">
             <div className="mv-card glass-card reveal-left">
@@ -70,7 +64,7 @@ export default function About() {
               ArqGene was born from a simple observation: biology is one of the most complex fields in science, yet the tools researchers use to study it are often fragmented, slow, and disconnected from each other. We saw an opportunity to change that.
             </p>
             <p>
-              Founded at the VIT Technology Business Incubator in Vellore, India, our team combines deep expertise in molecular biology, AI engineering, microfluidics, and industrial bioprocessing. We've built ArqGene to be the platform we wished existed when we started our own research.
+              Founded in 2025 at the VIT Technology Business Incubator in Vellore, India, our team combines deep expertise in molecular biology, AI engineering, microfluidics, and industrial bioprocessing. We've built ArqGene to be the platform we wished existed when we started our own research.
             </p>
             <p>
               Today, ArqGene operates at the intersection of three major technological waves: <strong>artificial intelligence</strong>, <strong>synthetic biology</strong>, and <strong>precision medicine</strong>. Our three flagship products — GenXFlow™, Uyirinai, and Marabi — represent our first step toward a fully integrated biological intelligence platform.
@@ -79,28 +73,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="timeline-section section grid-bg">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-badge reveal">Milestones</span>
-            <h2 className="section-title reveal">Our Journey</h2>
-          </div>
-          <div className="timeline">
-            {timeline.map((item, i) => (
-              <div key={i} className={`timeline-item ${i % 2 === 0 ? 'left' : 'right'} reveal`} style={{ transitionDelay: `${i * 0.08}s` }}>
-                <div className="timeline-connector" />
-                <div className="timeline-card glass-card">
-                  <span className="timeline-year">{item.year}</span>
-                  <h4 className="timeline-title">{item.title}</h4>
-                  <p className="timeline-desc">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-            <div className="timeline-line" />
-          </div>
-        </div>
-      </section>
+      {/* Company Journey / Milestones (Spot #1) */}
+      <JourneyTimeline />
 
       {/* Values */}
       <section className="values-section section">
@@ -122,7 +96,7 @@ export default function About() {
       </section>
 
       {/* Location */}
-      <section className="location-section section grid-bg">
+      <section className="location-section section">
         <div className="container">
           <div className="location-grid">
             <div className="reveal-left">

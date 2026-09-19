@@ -1,0 +1,488 @@
+/* =========================================================
+   COMPANY JOURNEY / MILESTONE TIMELINE
+   Deep-Tech Synthetic Biology Aesthetic
+   ========================================================= */
+
+.journey-section {
+  position: relative;
+  background-color: transparent;
+  padding: 6rem 0 7rem;
+  overflow: hidden;
+}
+
+/* Header */
+.journey-header {
+  margin-bottom: 4.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.journey-badge {
+  background: rgba(0, 194, 255, 0.1);
+  border: 1px solid rgba(0, 194, 255, 0.3);
+  color: #00C2FF;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.journey-title {
+  margin-top: 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.journey-sub {
+  max-width: 680px;
+  margin: 0.75rem auto 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   DUAL-SIDED DESKTOP TIMELINE TRACK
+   ========================================================= */
+
+.journey-timeline-track {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Continuous Center Circuit Rail Line */
+.timeline-center-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 194, 255, 0.85) 0%,
+    rgba(16, 185, 129, 0.8) 35%,
+    rgba(168, 85, 247, 0.8) 70%,
+    rgba(245, 158, 11, 0.8) 100%
+  );
+  box-shadow: 0 0 16px rgba(0, 194, 255, 0.4);
+  z-index: 1;
+}
+
+/* Timeline Row */
+.timeline-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.timeline-row:last-child {
+  margin-bottom: 0;
+}
+
+/* 3-Slot Architecture on Desktop: Left, Center (Rail/Node), Right */
+.timeline-slot {
+  display: flex;
+  position: relative;
+  min-width: 0;
+}
+
+.timeline-slot-left {
+  flex: 1;
+  width: calc(50% - 36px);
+  justify-content: flex-end;
+  padding-right: 2.25rem;
+}
+
+.timeline-slot-center {
+  width: 72px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.timeline-slot-right {
+  flex: 1;
+  width: calc(50% - 36px);
+  justify-content: flex-start;
+  padding-left: 2.25rem;
+}
+
+/* Center Node Pin */
+.timeline-node-pin {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #070b14;
+  border: 2px solid var(--milestone-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px var(--milestone-glow);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.timeline-lucide-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.node-halo {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: var(--milestone-glow);
+  filter: blur(10px);
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.node-ripple {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid var(--milestone-accent);
+  opacity: 0;
+  animation: nodeRipple 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  z-index: 1;
+}
+
+@keyframes nodeRipple {
+  0% { transform: scale(0.85); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Row Hover Interaction */
+.timeline-row.row-hovered .timeline-card {
+  transform: translateY(-4px);
+  border-color: var(--milestone-border);
+  box-shadow: 
+    0 16px 36px -8px rgba(0, 0, 0, 0.6),
+    0 0 30px var(--milestone-glow);
+}
+
+.timeline-row.row-hovered .node-circle {
+  transform: scale(1.12);
+  box-shadow: 0 0 28px var(--milestone-accent);
+}
+
+.timeline-row.row-hovered .node-halo {
+  opacity: 1;
+}
+
+/* Timeline Card */
+.timeline-card {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  padding: 2rem 2.25rem;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* Date Stamp Column */
+.timeline-date-stamp {
+  padding-top: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-slot-left .timeline-date-stamp {
+  justify-content: flex-end;
+}
+
+.timeline-slot-right .timeline-date-stamp {
+  justify-content: flex-start;
+}
+
+.date-stamp-pill {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.45rem 1.15rem;
+  border-radius: 9999px;
+  border: 1px solid;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.date-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Card Content Details */
+.card-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.milestone-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid;
+}
+
+.milestone-mobile-date {
+  display: none;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.milestone-headline {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.milestone-org {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+  margin-bottom: 0.85rem;
+}
+
+.milestone-desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.15rem;
+}
+
+/* Featured Products Grid (Milestone 3) */
+.products-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.15rem;
+}
+
+.product-item-chip {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.product-item-chip:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.prod-chip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.prod-chip-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: var(--font-display, sans-serif);
+}
+
+.prod-chip-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  letter-spacing: 0.03em;
+}
+
+.prod-chip-desc {
+  font-size: 0.775rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.45;
+}
+
+/* Fermion AI Full-Width Featured Card */
+.product-item-chip.product-featured-full {
+  grid-column: 1 / -1;
+  background: rgba(168, 85, 247, 0.06);
+  border: 1px solid rgba(168, 85, 247, 0.28);
+  border-left: 4px solid #a855f7;
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08);
+}
+
+.product-item-chip.product-featured-full .prod-chip-name {
+  font-size: 1rem;
+  color: #c084fc !important;
+}
+
+.product-item-chip.product-featured-full .prod-chip-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.55;
+  margin-top: 0.2rem;
+}
+
+
+/* Tags Row */
+.milestone-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.milestone-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.725rem;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+}
+
+/* =========================================================
+   RESPONSIVE / MOBILE TIMELINE (< 900px)
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .journey-timeline-track {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Rail moved to left */
+  .timeline-center-rail {
+    left: 28px;
+  }
+
+  .timeline-row {
+    flex-direction: row !important;
+    align-items: flex-start;
+    margin-bottom: 2.75rem;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  /* Hide the separate date stamp slot on mobile */
+  .timeline-slot-date {
+    display: none !important;
+  }
+
+  /* Center node pin slot takes the left column */
+  .timeline-slot-center {
+    order: 1;
+    width: 44px;
+    padding-top: 1.25rem;
+    flex-shrink: 0;
+    z-index: 3;
+  }
+
+  /* Card slot takes the remainder of the row */
+  .timeline-slot-card {
+    order: 2;
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .timeline-node-pin {
+    width: 40px;
+    height: 40px;
+  }
+
+  .node-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .timeline-lucide-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  /* Date inside card header visible */
+  .milestone-mobile-date {
+    display: inline-block;
+  }
+
+  .timeline-card {
+    max-width: 100%;
+    padding: 1.4rem 1.25rem;
+  }
+
+  .products-featured-grid {
+    grid-template-columns: 1fr;
+  }
+}

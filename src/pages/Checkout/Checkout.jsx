@@ -13,8 +13,8 @@ const productPricing = {
     color: '#00C2FF',
     tiers: [
       { id: 'community', name: '7-Day Free Trial', priceMonthly: 0, priceAnnual: 0, desc: 'Full-featured trial for individual research', features: ['5 GB Cloud Storage', 'Standard WGS & RNA-Seq', '7-Day Trial Support', 'Docker Container Access'] },
-      { id: 'academic', name: 'Academic / Research', priceMonthly: 999, priceAnnual: 9990, desc: 'Ideal for university labs & independent researchers', popular: true, features: ['100 GB Cloud Storage', 'All 10 Genomic Pipelines', 'Priority SLURM HPC Dispatch', 'VCF & BAM Variant Reports', 'Email & Discord Support'] },
-      { id: 'lab', name: 'Professional Lab', priceMonthly: 4999, priceAnnual: 49990, desc: 'For biotech labs & clinical sequencing centers', features: ['1 TB Cloud Storage', 'Unlimited Parallel Runs', 'Custom Pipeline Scripting', 'REST API & Python SDK', '24/7 Priority Support'] },
+      { id: 'academic', name: 'Academic / Research', priceMonthly: 5000, priceAnnual: 50000, originalPriceAnnual: 60000, desc: 'Ideal for university labs & independent researchers (Save ₹10,000 on annual plan)', popular: true, features: ['100 GB Cloud Storage', 'All 10 Genomic Pipelines', 'Priority SLURM HPC Dispatch', 'VCF & BAM Variant Reports', 'Email & Discord Support'] },
+      { id: 'lab', name: 'Professional Lab', customPrice: true, priceMonthly: 0, priceAnnual: 0, desc: 'Contact Us — pricing will be discussed based on requirements', features: ['1 TB Cloud Storage', 'Unlimited Parallel Runs', 'Custom Pipeline Scripting', 'REST API & Python SDK', '24/7 Priority Support'] },
     ],
   },
   uyirinai: {
@@ -196,14 +196,31 @@ export default function Checkout() {
                       <div className="tier-head">
                         <div className="tier-name">{tier.name}</div>
                         <div className="tier-price">
-                          {tier.priceMonthly === 0 ? (
+                          {tier.customPrice ? (
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.1rem' }}>
+                              <span style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--white)' }}>Contact Us</span>
+                              <span style={{ fontSize: '0.72rem', color: 'var(--muted-text)' }}>Custom Quote</span>
+                            </div>
+                          ) : tier.priceMonthly === 0 ? (
                             <span className="free-tag">Free</span>
                           ) : (
-                            <>
-                              <span className="curr">₹</span>
-                              <span className="amt">{(billingCycle === 'annual' ? tier.priceAnnual : tier.priceMonthly).toLocaleString('en-IN')}</span>
-                              <span className="per">/{billingCycle === 'annual' ? 'year' : 'mo'}</span>
-                            </>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.1rem' }}>
+                              {tier.originalPriceAnnual && billingCycle === 'annual' && (
+                                <span style={{ textDecoration: 'line-through', color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem', fontWeight: 600 }}>
+                                  ₹{tier.originalPriceAnnual.toLocaleString('en-IN')}/year
+                                </span>
+                              )}
+                              <div style={{ display: 'flex', alignItems: 'baseline' }}>
+                                <span className="curr">₹</span>
+                                <span className="amt">{(billingCycle === 'annual' ? tier.priceAnnual : tier.priceMonthly).toLocaleString('en-IN')}</span>
+                                <span className="per">/{billingCycle === 'annual' ? 'year' : 'mo'}</span>
+                              </div>
+                              {tier.originalPriceAnnual && billingCycle === 'annual' && (
+                                <span style={{ fontSize: '0.72rem', color: 'var(--neon-teal)', fontWeight: 600 }}>
+                                  Save ₹10,000
+                                </span>
+                              )}
+                            </div>
                           )}
                         </div>
                       </div>
@@ -357,9 +374,17 @@ export default function Checkout() {
                   </div>
                   <div className="sd-row">
                     <span>Base Price</span>
-                    <span className="sd-val">{price === 0 ? 'Free' : `₹${price.toLocaleString('en-IN')}`}</span>
+                    <span className="sd-val">
+                      {currentTier.customPrice
+                        ? 'Custom Quote'
+                        : price === 0
+                        ? 'Free'
+                        : billingCycle === 'annual' && savings > 0
+                        ? `₹${(currentTier.originalPriceAnnual || currentTier.priceMonthly * 12).toLocaleString('en-IN')}`
+                        : `₹${price.toLocaleString('en-IN')}`}
+                    </span>
                   </div>
-                  {savings > 0 && (
+                  {savings > 0 && !currentTier.customPrice && (
                     <div className="sd-row savings">
                       <span>Annual Savings</span>
                       <span className="sd-val">-₹{savings.toLocaleString('en-IN')}</span>
@@ -367,13 +392,13 @@ export default function Checkout() {
                   )}
                   <div className="sd-row">
                     <span>Tax (GST 18% inclusive)</span>
-                    <span className="sd-val">Included</span>
+                    <span className="sd-val">{currentTier.customPrice ? 'Per Quote' : 'Included'}</span>
                   </div>
                   <div className="summary-divider" />
                   <div className="sd-row total">
                     <span>Total Due Today</span>
                     <span className="total-amt" style={{ color: productObj.color }}>
-                      {price === 0 ? '₹0 (Free Trial)' : `₹${price.toLocaleString('en-IN')}`}
+                      {currentTier.customPrice ? 'Custom (Contact Us)' : (price === 0 ? '₹0 (Free Trial)' : `₹${price.toLocaleString('en-IN')}`)}
                     </span>
                   </div>
                 </div>

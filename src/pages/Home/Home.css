@@ -379,7 +379,7 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -823,7 +823,9 @@
 
 @media (max-width: 768px) {
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
   }
   .pipeline-metrics {
     grid-template-columns: repeat(2, 1fr);
@@ -833,9 +835,6 @@
 @media (max-width: 480px) {
   .hero-actions {
     flex-direction: column;
-  }
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
   }
   .cta-card {
     padding: 3rem 1.5rem;

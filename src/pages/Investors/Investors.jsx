@@ -8,13 +8,14 @@ export default function Investors() {
       <PageHero
         badge="Investor Relations"
         title={<>The <span className="gradient-text">Investment Opportunity</span></>}
-        subtitle="ArqGene is building the enterprise AI platform for synthetic biology. We are early-stage, India-based, and globally ambitious."
+        subtitle="Founded in 2025 at VIT-TBI, ArqGene is building the enterprise AI platform for synthetic biology. We are early-stage, India-based, and globally ambitious."
         color="#9D4EDD"
       />
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginBottom: '3rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
             {[
+              { icon: '🗓️', title: 'Founded', val: '2025', desc: 'Inception at VIT-TBI, Vellore' },
               { icon: '🌍', title: 'Market Size', val: '$800B+', desc: 'Global synthetic biology market by 2035' },
               { icon: '🚀', title: 'Funding Stage', val: 'Seed', desc: 'Actively fundraising for Series A' },
               { icon: '🏛️', title: 'Grants Received', val: '2 Govt Grants', desc: 'DST NIDHI PRAYAS + DST Ignition' },
