@@ -26,7 +26,7 @@ const milestones = [
   {
     id: 'nidhi-prayas',
     date: 'April 2025',
-    badge: 'Grant Funding',
+    badge: 'Milestone 02 . Grant Funding',
     headline: 'Secured DST National Research Grants',
     organization: 'Department of Science and Technology (DST), Govt. of India',
     description: 'Awarded competitive catalytic funding under the DST NIDHI-PRAYAS and DST Ignition schemes to accelerate deep-tech prototyping, AI biomanufacturing scale-up, and translational bio-engineering.',
@@ -45,37 +45,47 @@ const milestones = [
   {
     id: 'product-rollout',
     date: 'July 2026',
-    badge: 'Commercial Deployment',
-    headline: 'Simultaneous Launch of 4 Flagship Platforms',
+    badge: 'Milestone 03 . Commercial Deployment',
+    headline: 'Launch of 6 Flagship Platforms',
     organization: 'ArqGene Core Platform Suite Release',
     description: 'Released our core suite of computational biology, sequence profiling, and AI platforms to bridge biological data with clinical execution.',
     color: '#a855f7',
     glow: 'rgba(168, 85, 247, 0.25)',
     borderGlow: 'rgba(168, 85, 247, 0.45)',
     products: [
-      { 
-        name: 'GenXFlow™', 
-        desc: 'Automated high-throughput bioinformatics & sequencing workflow pipeline', 
-        color: '#00C2FF' 
+      {
+        name: 'GenXFlow™',
+        desc: 'Automated DNA orchestration pipeline powered by SPAdes, Flye, QIIME2, and UniqueGene for high-throughput shotgun genomics and marker discovery.',
+        color: '#00C2FF'
       },
-      { 
-        name: 'Marabi', 
-        desc: 'Computational genomics & biological design engine for molecular cloning & plasmids', 
-        color: '#FF007A' 
+      {
+        name: 'Marabi',
+        desc: 'Affordable molecular cloning and plasmid design software simplifying in-silico construct engineering and plasmid mapping for every biotech lab.',
+        color: '#FF007A'
       },
-      { 
-        name: 'Uyirinai', 
-        desc: 'Bio-computational docking & in-built GPU molecular dynamics simulation platform', 
-        color: '#00E6C7' 
+      {
+        name: 'Uyirinai',
+        desc: 'Zero-barrier molecular docking and in-built GPU MD simulation platform, empowering students and researchers to run advanced structural biology with ease.',
+        color: '#00E6C7'
       },
-      { 
-        name: 'Fermion AI R100™ (AI-Driven Bioreactor)', 
-        desc: 'Fermion AI R100™ is our AI-driven bioreactor system that revolutionizes biomanufacturing and micro-organism cultivation through intelligent automation and real-time optimization.', 
+      {
+        name: 'Fermion AI R100™ (AI-Driven Bioreactor)',
+        desc: 'AI-driven smart bioreactor automating microbial cultivation and biomanufacturing through real-time process optimization to maximize yields.',
         color: '#a855f7',
         featured: true,
       },
+      {
+        name: 'Crispr Scan',
+        desc: 'Lab-on-a-chip microfluidic platform pairing CRISPR technology for rapid point-of-care diagnostics and high-precision gene editing.',
+        color: '#00E6C7'
+      },
+      {
+        name: 'Uveisense AI',
+        desc: 'Bringing precision eye care anywhere. Uveisense AI unites patient clinical symptoms with slit-lamp ocular imaging for early, explainable anterior segment uveitis screening and direct specialist care.',
+        color: '#FF007A'
+      }
     ],
-    highlights: ['4 Platforms Released', '100% Offline / Cloud', 'Enterprise SLAs'],
+    highlights: ['6 Platforms Released', '100% Offline / Cloud', 'Enterprise SLAs'],
     // Lucide Layers / Cpu
     iconSvg: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="timeline-lucide-icon">
@@ -88,7 +98,7 @@ const milestones = [
   {
     id: 'hackathon-victory',
     date: 'Aug 2026',
-    badge: '1st Place Victory',
+    badge: 'Milestone 04 . 1st Place Victory',
     headline: 'Winner – EyeQInnovate Hackathon 2.0',
     organization: 'Jointly presented by Dr. Agarwal’s Eye Hospital & StartupTN',
     description: 'Bagged top honors for pioneering clinical AI diagnostic solutions, validated by premier ophthalmologists and regional venture accelerators.',
@@ -166,9 +176,9 @@ export default function JourneyTimeline() {
                 {item.products && (
                   <div className="products-featured-grid">
                     {item.products.map((p) => (
-                      <div 
-                        key={p.name} 
-                        className={`product-item-chip ${p.featured ? 'product-featured-full' : ''}`} 
+                      <div
+                        key={p.name}
+                        className={`product-item-chip ${p.featured ? 'product-featured-full' : ''}`}
                         style={{ borderLeftColor: p.color }}
                       >
                         <div className="prod-chip-header">
